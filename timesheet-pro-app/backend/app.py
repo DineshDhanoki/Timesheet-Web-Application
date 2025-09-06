@@ -16,8 +16,12 @@ app.config.from_object(Config)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 jwt = JWTManager(app)
 
-@app.before_first_request
-def setup():
+# ✅ Flask 3: run init_db once at startup
+with app.app_context():
+    init_db()
+
+# Initialize DB right after app is created
+with app.app_context():
     init_db()
 
 # ---------- AUTH ----------

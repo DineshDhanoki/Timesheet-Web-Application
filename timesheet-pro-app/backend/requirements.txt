@@ -1,7 +1,7 @@
 Flask==3.0.3
 Flask-Cors==4.0.1
 Flask-JWT-Extended==4.6.0
-SQLAlchemy==2.0.30
+SQLAlchemy==2.0.36
 email-validator==2.2.0
 Jinja2==3.1.4
-WeasyPrint==61.2
+reportlab==4.2.2
